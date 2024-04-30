@@ -6,28 +6,28 @@
         <a href="/locations/"> Our Locations</a>
  </nav>
 <head>
-    <title>Product Inventory</title>
+    <title>Location Information</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>Product Inventory</h1>
+        <h1>Location Information</h1>
         <table class="table">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
+                    <th>LocationId</th>
+                    <th>Location Address</th>
+                    <th>Location City</th>
+                    <th>Location State</th>
                     <th>LocationId</th>
                 </tr>
             </thead>
             <tbody>
                 {% for product in products %}
                 <tr>
-                    <td>{{ product.name }}</td>
-                    <td>{{ product.description }}</td>
-                    <td>{{ product.price }}</td>
+                    <td>{{ product.locationId }}</td>
+                    <td>{{ product.location_state}}</td>
+                    <td>{{ product.location_city }}</td>
                     <td>{{ product.quantity }}</td>
                     <td>{{ product.locationId }}</td>
                 </tr>
