@@ -15,6 +15,7 @@ def add_product(request):
         price = request.POST['price']
         quantity = request.POST['quantity']
         locationId = request.POST['locationId']
+        
         Product.objects.create(name=name, description=description, price=price, quantity=quantity, location = locationId)
         return redirect('product_list')
     return render(request, 'IMS_APP/add_product.html')
