@@ -5,7 +5,7 @@ def product_list(request):
     products = Product.objects.all()
     location = Location.objects.all()
     inventory = Inventory.objects.all()
-    return render(request, 'IMS_APP/product_list.html', {'products': products, 'location': location,'inventory': inventory})
+    return render(request, 'IMS_APP/product_list.html', {'products': products, 'locations': location,'inventorys': inventory})
 
 
 # ADD Location ID
@@ -36,5 +36,5 @@ def add_product(request):
     return render(request, 'IMS_APP/add_product.html')
 
 def location_info(request):
-    location = Location.objects.all()
-    return render(request, 'IMS_APP/location_info.html', {'location': location})
+    locations = Location.objects.all()
+    return render(request, 'IMS_APP/location_info.html', {'locations': locations})

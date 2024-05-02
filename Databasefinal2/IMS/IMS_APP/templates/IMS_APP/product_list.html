@@ -30,10 +30,18 @@
                     <td>{{ product.size }}</td>
                     <td>{{ product.type }}</td>
                     <td>{{ product.price }}</td>
-                    <td>{{ Location.quantity }}</td>
-                    <td>{{ Locatoin.locationid }}</td>
+
+                    {% for inventory in inventorys %}
+                    <td>{{ inventory.quantity }}</td>
+                    {% endfor %}
+
+                    {% for location in locations %}
+                        <td>{{ location.locationid }}</td>
+                    {% endfor %}
                 </tr>
                 {% endfor %}
+
+
             </tbody>
         </table>
     </div>

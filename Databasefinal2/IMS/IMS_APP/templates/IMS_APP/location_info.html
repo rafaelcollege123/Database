@@ -21,11 +21,11 @@
                 </tr>
             </thead>
             <tbody>
-                {% for product in products %}
+                {% for location in locations %}
                 <tr>
-                    <td>{{ Location.locationid }}</td>
-                    <td>{{ Location.address}}</td>
-                    <td>{{ Location.state }}</td>
+                    <td>{{ location.locationid }}</td>
+                    <td>{{ location.address}}</td>
+                    <td>{{ location.state }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
