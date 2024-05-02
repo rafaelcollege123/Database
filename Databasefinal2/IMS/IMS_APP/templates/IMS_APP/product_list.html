@@ -26,11 +26,12 @@
             <tbody>
                 {% for product in products %}
                 <tr>
-                    <td>{{ product.productId }}</td>
+                    <td>{{ product.productid }}</td>
                     <td>{{ product.size }}</td>
                     <td>{{ product.type }}</td>
-                    <td>{{ inventory.quantity }}</td>
-                    <td>{{ location.locationId }}</td>
+                    <td>{{ product.price }}</td>
+                    <td>{{ Location.quantity }}</td>
+                    <td>{{ Locatoin.locationid }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

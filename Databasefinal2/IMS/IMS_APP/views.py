@@ -12,7 +12,7 @@ def product_list(request):
 #ProcuctID , size  
 def add_product(request):
     if request.method == 'POST':
-        productId = request.POST.get('productId')
+        productid = request.POST.get('productid')
         size = request.POST.get('size')
         type = request.POST.get('type')
         price = request.POST.get('price')
@@ -22,17 +22,15 @@ def add_product(request):
         address = request.POST.get('address')
         state = request.POST.get('state')
         
-        # Assuming Location model has fields locationid, address, state
-        location = Location.objects.create(locationid=locationid, address=address, state=state)
-        
-        # Ensure the location object is saved before creating the Inventory object
-        location.save()
-        
-        # Assuming Inventory model has fields locationid, productId, quantity
-        Inventory.objects.create(locationid=location, productId=productId, quantity=quantity)
-        
-        # Assuming Product model has fields productId, size, type, price
-        Product.objects.create(productId=productId, size=size, type=type, price=price)
+    # For Product
+        product, created = Product.objects.get_or_create(productid=productid, defaults={'size': size, 'type': type, 'price': price})
+
+    # For Location
+        location, created = Location.objects.get_or_create(locationid=locationid, defaults={'address': address, 'state': state})
+
+        Inventory.objects.create(locationid=location, productid=product, quantity=quantity)
+
+
 
         return redirect('product_list')
     return render(request, 'IMS_APP/add_product.html')
