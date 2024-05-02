@@ -12,16 +12,34 @@
     <h1>Add Product</h1>
     <form method="post">
         {% csrf_token %}
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name"><br>
-        <label for="description">Description:</label><br>
-        <textarea id="description" name="description"></textarea><br>
+        <label for="productId">Product Id:</label><br>
+        <input type="text" id="productId" name="productId"><br>
+
+        <label for="size">Size:</label><br>
+        <input type="text" id="size" name="size"><br>
+
+        <label for="type">Type:</label><br>
+        <input type="text" id="type" name="type"><br>
+
         <label for="price">Price:</label><br>
         <input type="text" id="price" name="price"><br>
+
         <label for="quantity">Quantity:</label><br>
         <input type="text" id="quantity" name="quantity"><br>
-        <label for="location">LocationId:</label><br>
-        <input type="text" id="locationId" name="location"><br>
+
+        <label for="locationid">LocationId:</label><br>
+        <input type="text" id="locationid" name="locationid"><br>
+
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address"><br>
+
+        <label for="state">State:</label><br>
+        <input type="text" id="state" name="state"><br>
+
+        
+
+
+
         <input type="submit" value="Add Product"><br>
 
     </form>

@@ -17,19 +17,15 @@
                 <tr>
                     <th>LocationId</th>
                     <th>Location Address</th>
-                    <th>Location City</th>
                     <th>Location State</th>
-                    <th>LocationId</th>
                 </tr>
             </thead>
             <tbody>
                 {% for product in products %}
                 <tr>
-                    <td>{{ product.locationId }}</td>
-                    <td>{{ product.location_state}}</td>
-                    <td>{{ product.location_city }}</td>
-                    <td>{{ product.quantity }}</td>
-                    <td>{{ product.locationId }}</td>
+                    <td>{{ location.locationId }}</td>
+                    <td>{{ location.address}}</td>
+                    <td>{{ location.state }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

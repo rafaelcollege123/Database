@@ -15,21 +15,22 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Description</th>
+                    <th>Product ID</th>
+                    <th>Size</th>
+                    <th>Type</th>
                     <th>Price</th>
-                    <th>Quantity</th>
+                    <th>Quantity</th>                 
                     <th>LocationId</th>
                 </tr>
             </thead>
             <tbody>
                 {% for product in products %}
                 <tr>
-                    <td>{{ product.name }}</td>
-                    <td>{{ product.description }}</td>
-                    <td>{{ product.price }}</td>
-                    <td>{{ product.quantity }}</td>
-                    <td>{{ product.locationId }}</td>
+                    <td>{{ product.productId }}</td>
+                    <td>{{ product.size }}</td>
+                    <td>{{ product.type }}</td>
+                    <td>{{ inventory.quantity }}</td>
+                    <td>{{ location.locationId }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
