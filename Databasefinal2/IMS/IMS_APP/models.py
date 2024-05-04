@@ -13,6 +13,7 @@ class Inventory(models.Model):
     productid = models.ForeignKey('Product', models.DO_NOTHING, db_column='productid')
     quantity = models.CharField(max_length=45, blank=True, null=True)
 
+
     class Meta:
         managed = False
         db_table = 'inventory'
@@ -23,6 +24,8 @@ class Location(models.Model):
     locationid = models.IntegerField(primary_key=True)
     address = models.CharField(max_length=45, blank=True, null=True)
     state = models.CharField(max_length=45, blank=True, null=True)
+    def __str__(self):
+        return str(self.locationid)
 
     class Meta:
         managed = False
