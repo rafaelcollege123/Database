@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'IMS.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ClothingStore',
+        'NAME': 'clothingstore',
         'USER': 'root',
-        'PASSWORD': 'newpassword',
+        'PASSWORD': 'Godinez680!',
         'PORT': 3306,
-        'HOST' : 'localhost'
+        'HOST' : '127.0.0.1'
 
     }
 }
